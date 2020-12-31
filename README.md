@@ -22,8 +22,8 @@ This website is for creating your own to do list to reorgnaize your work or hopp
 
 ### Stretch Goals
 
-Adding more styling to the page :
+-Adding more styling to the page :
 - put every suggestion in drop down menu
-allowing the user to create more lists without removing the original 
-adding a database to save the data in casse of crach
-adding a edit functin so that the user can just change the content of the task in sted of removing it and creating a new one 
+- allowing the user to create more lists without removing the original 
+- adding a database to save the data in casse of crach
+- adding a edit functin so that the user can just change the content of the task in sted of removing it and creating a new one 
