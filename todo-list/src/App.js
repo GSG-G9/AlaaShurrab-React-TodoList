@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import Todo from "./Component/Todo";
 
 class App extends React.Component {
   state = {
@@ -28,6 +29,15 @@ class App extends React.Component {
     );
   };
 
+  removeTodo = (event) => {
+    this.state.todoArr.splice(event.target.parentNode.id, 1);
+    this.setState((pastState) => {
+      return {
+        todoArr: pastState.todoArr,
+      };
+    });
+  };
+
   resetTodo = () => {
     this.setState({
       todoArr: [],
@@ -47,25 +57,23 @@ class App extends React.Component {
             className="text-field"
           />
           <button
+            onClick={this.addTodo}
             className="add-btn"
             type="button"
             name="add"
-            onClick={this.addTodo}
           >
             Add
           </button>
           <button
+            onClick={this.resetTodo}
             className="reset-btn"
             type="button"
             name="Reset"
-            onClick={this.resetTodo}
           >
             Reset
           </button>
-
-          <div className="todo-container">
-            <Todo todoArr={this.state.todoArr} />
-          </div>
+          <Todo todoArr={this.state.todoArr} removeTodo={this.removeTodo} />
+          <div className="todo-container"></div>
           <h1 className="title">To-Do Lest</h1>
         </div>
       </div>

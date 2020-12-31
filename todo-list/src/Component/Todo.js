@@ -14,7 +14,12 @@ const Todo = (props) => {
             >
               {item}
             </p>
-            <button type="button" name="remove" className="todo-remove">
+            <button
+              type="button"
+              name="remove"
+              className="todo-remove"
+              onClick={props.removeTodo}
+            >
               X
             </button>
           </li>
