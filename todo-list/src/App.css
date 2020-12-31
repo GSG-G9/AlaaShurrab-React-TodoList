@@ -46,6 +46,17 @@ input[type="text"]:focus {
   border: 3px solid rgb(21, 24, 224);
 }
 
+.container {
+  background: linear-gradient(-20deg, #2f3247 10%, #a0cecf 80%);
+  width: 450px;
+  color: #2f3247;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  min-height: 500px;
+  overflow-y: hidden;
+}
+
 .title {
   background-color: #a0cecf80;
   border-radius: 30px;
@@ -53,4 +64,35 @@ input[type="text"]:focus {
   position: absolute;
   top: 5vh;
   left: 40vw;
+}
+
+.todo-block {
+  position: relative;
+  list-style-type: none;
+  margin: 20px 10px;
+  flex-direction: row;
+}
+
+.block-container {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.todo-remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 100px;
+  background-color: red;
+}
+
+.todo-content {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.done {
+  text-decoration: line-through;
 }
