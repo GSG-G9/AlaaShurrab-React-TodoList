@@ -28,6 +28,12 @@ class App extends React.Component {
     );
   };
 
+  resetTodo = () => {
+    this.setState({
+      todoArr: [],
+    });
+  };
+
   render() {
     return (
       <div className="App App-header">
@@ -48,12 +54,17 @@ class App extends React.Component {
           >
             Add
           </button>
-          <button className="reset-btn" type="button" name="Reset">
+          <button
+            className="reset-btn"
+            type="button"
+            name="Reset"
+            onClick={this.resetTodo}
+          >
             Reset
           </button>
 
           <div className="todo-container">
-            {/* should add the todo component here */}
+            <Todo todoArr={this.state.todoArr} />
           </div>
           <h1 className="title">To-Do Lest</h1>
         </div>
